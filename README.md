@@ -1,68 +1,87 @@
-# High Availability Linux Cluster (HA) – Sin Kubernetes
+# Cluster HA en Linux con HAProxy y Keepalived
+
+Proyecto de implementación de un cluster de alta disponibilidad en sistemas Linux, utilizando HAProxy para balanceo de carga, Keepalived para failover automático mediante VRRP, Nginx como servidor web y base de datos replicada para garantizar continuidad del servicio.
 
 ## 📌 Descripción
 
-Este proyecto implementa un cluster de Alta Disponibilidad (HA) clásico en Linux utilizando tecnologías tradicionales de infraestructura sin Kubernetes.
+Este proyecto tiene como objetivo el diseño e implementación de una infraestructura de alta disponibilidad (High Availability) en entornos Linux sin utilizar Kubernetes.
 
-El objetivo es diseñar una arquitectura que garantice:
+La solución permite:
 
-- Balanceo de carga
-- Failover automático
-- Alta disponibilidad de servicios web
-- Base de datos replicada
-- Eliminación de puntos únicos de fallo
+- Balancear tráfico HTTP/HTTPS entre múltiples servidores web
 
+- Garantizar failover automático mediante IP virtual (VRRP)
 
-## 🏗 Arquitectura
+- Mantener disponibilidad del servicio ante caída de nodos
 
-Clientes → IP Virtual (Keepalived) → HAProxy (LB1/LB2) → Nginx (WEB1/WEB2) → PostgreSQL (Primary/Replica)
+- Replicar base de datos para asegurar integridad y continuidad de datos
 
+- Realizar pruebas reales de tolerancia a fallos
 
-## ⚙ Tecnologías utilizadas
+Proyecto personal enfocado en la administración avanzada de sistemas Linux, redes y alta disponibilidad, diseñado para demostrar conocimientos sólidos en clustering tradicional, balanceo de carga y continuidad de servicio en entornos productivos.
+
+## 🛠️ Tecnologías utilizadas
 
 - Debian 13
+
 - HAProxy
+
 - Keepalived (VRRP)
+
 - Nginx
-- PostgreSQL (Streaming Replication)
-- VirtualBox
 
+- PostgreSQL (replicación primaria-secundaria)
 
-## 🔁 Características principales
+- Bash scripting
 
-- Balanceo L7 Round Robin
-- Health Checks automáticos
-- Failover automático ante caída del Load Balancer
-- Replicación en tiempo real de base de datos
-- Infraestructura totalmente reproducible
+- Virtualización (VirtualBox)
 
-
-## 🧪 Pruebas realizadas
-
-- Simulación de caída de LB primario
-- Simulación de caída de servidor web
-- Validación de replicación PostgreSQL
-- Comprobación de IP Virtual activa
-
+- Git y GitHub
 
 ## 📂 Estructura del proyecto
 
-cluster-ha-linux/
-│
-├── docs/              → Documentación técnica paso a paso
-├── configs/           → Archivos de configuración (HAProxy, Keepalived, Nginx, DB)
-├── scripts/           → Scripts de automatización y pruebas
-├── diagrams/          → Diagramas de arquitectura
-├── screenshots/       → Evidencias visuales del funcionamiento
-├── anexos/            → Troubleshooting y mejoras futuras
-└── README.md
+La estructura del repositorio está organizada por fases de desarrollo y componentes del sistema:
 
+- `docs/` → Documentación técnica del proyecto (PASO A PASO)
 
-## 👨‍💻 Autor
+- `configs/` → Archivos de configuración (HAProxy, Keepalived, Nginx, DB)
 
+- `scripts/` → Scripts de automatización y pruebas de failover
+
+- `diagrams/` → Diagramas de arquitectura
+
+- `screenshots/` → Evidencias visuales del funcionamiento
+
+- `anexos/` → Troubleshooting y mejoras futuras
+
+## 🚀 Despliegue rápido
+
+###  Instalación básica de servicios principales (ejemplo nodo balanceador)
+
+```bash
+sudo apt update
+sudo apt install haproxy keepalived -y
+```
+
+##  Instalación servidor web
+
+```bash
+sudo apt install nginx -y
+```
+
+##  Instalación base de datos (ejemplo PostgreSQL)
+
+```bash
+sudo apt install postgresql -y
+```
+
+Para despliegue completo y configuración detallada, consultar la documentación en: **docs/**
+
+📄 Autor
 <div align="left"> <img src="https://img.shields.io/badge/Raúl%20Gutiérrez-blue?style=for-the-badge&logo=github" alt="Autor"> <a href="https://www.linkedin.com/in/raúl-gutiérrez-354073320" target="_blank"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"> </a> <br><br>
-  
-  **🎓 Formación:** ASIR  
-  **📅 Año:** 2026  
-  **🛠️ Especialidad:** Administración de Sistemas y Cloud Computing
+
+🎓 Formación: ASIR
+📅 Año: 2026
+🛠️ Especialidad: Administración de Sistemas y Cloud Computing
+
 </div>
