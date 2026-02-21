@@ -12,13 +12,11 @@ El objetivo es diseñar una arquitectura que garantice:
 - Base de datos replicada
 - Eliminación de puntos únicos de fallo
 
----
 
 ## 🏗 Arquitectura
 
 Clientes → IP Virtual (Keepalived) → HAProxy (LB1/LB2) → Nginx (WEB1/WEB2) → PostgreSQL (Primary/Replica)
 
----
 
 ## ⚙ Tecnologías utilizadas
 
@@ -29,7 +27,6 @@ Clientes → IP Virtual (Keepalived) → HAProxy (LB1/LB2) → Nginx (WEB1/WEB2)
 - PostgreSQL (Streaming Replication)
 - VirtualBox
 
----
 
 ## 🔁 Características principales
 
@@ -39,7 +36,6 @@ Clientes → IP Virtual (Keepalived) → HAProxy (LB1/LB2) → Nginx (WEB1/WEB2)
 - Replicación en tiempo real de base de datos
 - Infraestructura totalmente reproducible
 
----
 
 ## 🧪 Pruebas realizadas
 
@@ -48,7 +44,6 @@ Clientes → IP Virtual (Keepalived) → HAProxy (LB1/LB2) → Nginx (WEB1/WEB2)
 - Validación de replicación PostgreSQL
 - Comprobación de IP Virtual activa
 
----
 
 ## 📂 Estructura del proyecto
 
@@ -62,7 +57,6 @@ cluster-ha-linux/
 ├── anexos/            → Troubleshooting y mejoras futuras
 └── README.md
 
----
 
 ## 👨‍💻 Autor
 
