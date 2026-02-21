@@ -8,7 +8,7 @@ Este proyecto tiene como objetivo el diseño e implementación de una infraestru
 
 La solución permite:
 
-- Balancear tráfico HTTP/HTTPS entre múltiples servidores web
+- Balancear tráfico HTTP entre múltiples servidores web
 
 - Garantizar failover automático mediante IP virtual (VRRP)
 
@@ -75,9 +75,19 @@ sudo apt install nginx -y
 sudo apt install postgresql -y
 ```
 
-Para despliegue completo y configuración detallada, consultar la documentación en: **docs/**
+Para despliegue completo y configuración detallada, consultar la documentación en: `docs/`
 
-📄 Autor
+## 🧪 Pruebas de Alta Disponibilidad
+
+El entorno ha sido sometido a simulaciones reales de fallo:
+
+- Caída del nodo balanceador principal → Transferencia automática de la IP virtual al nodo secundario.
+- Caída de un servidor web → Exclusión automática del backend desde HAProxy.
+- Caída de base de datos primaria → Continuidad del servicio mediante réplica.
+
+Las evidencias se encuentran en `screenshots/`.
+
+## 📄 Autor
 <div align="left"> <img src="https://img.shields.io/badge/Raúl%20Gutiérrez-blue?style=for-the-badge&logo=github" alt="Autor"> <a href="https://www.linkedin.com/in/raúl-gutiérrez-354073320" target="_blank"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"> </a> <br><br>
 
 🎓 Formación: ASIR
