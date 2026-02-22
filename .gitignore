@@ -1,0 +1,73 @@
+############################
+# SISTEMA
+############################
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
+*.backup
+*.old
+*.orig
+
+############################
+# LOGS
+############################
+*.log
+logs/
+*.out
+*.err
+
+############################
+# ARCHIVOS DE SISTEMA
+############################
+.DS_Store
+Thumbs.db
+desktop.ini
+
+############################
+# SSH / CLAVES PRIVADAS
+############################
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+
+############################
+# VARIABLES SENSIBLES
+############################
+.env
+.env.*
+secrets.yml
+vault.yml
+group_vars/*/vault.yml
+host_vars/*/vault.yml
+
+############################
+# VAGRANT
+############################
+.vagrant/
+
+############################
+# EDITORES
+############################
+.vscode/
+.idea/
+*.iml
+
+############################
+# ARCHIVOS BINARIOS
+############################
+*.iso
+*.img
+*.qcow2
+*.ova
+*.tar.gz
+*.zip
+*.rar
