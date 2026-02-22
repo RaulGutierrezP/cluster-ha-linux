@@ -54,29 +54,6 @@ La estructura del repositorio está organizada por fases de desarrollo y compone
 
 - `anexos/` → Troubleshooting y mejoras futuras
 
-## 🚀 Despliegue rápido
-
-###  Instalación básica de servicios principales (ejemplo nodo balanceador)
-
-```bash
-sudo apt update
-sudo apt install haproxy keepalived -y
-```
-
-##  Instalación servidor web
-
-```bash
-sudo apt install nginx -y
-```
-
-##  Instalación base de datos (ejemplo PostgreSQL)
-
-```bash
-sudo apt install postgresql -y
-```
-
-Para despliegue completo y configuración detallada, consultar la documentación en: `docs/`
-
 ## 🧪 Pruebas de Alta Disponibilidad
 
 El entorno ha sido sometido a simulaciones reales de fallo:
@@ -88,10 +65,10 @@ El entorno ha sido sometido a simulaciones reales de fallo:
 Las evidencias se encuentran en `screenshots/`.
 
 ## 📄 Autor
+
 <div align="left"> <img src="https://img.shields.io/badge/Raúl%20Gutiérrez-blue?style=for-the-badge&logo=github" alt="Autor"> <a href="https://www.linkedin.com/in/raúl-gutiérrez-354073320" target="_blank"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"> </a> <br><br>
-
-🎓 Formación: ASIR
-📅 Año: 2026
-🛠️ Especialidad: Administración de Sistemas y Cloud Computing
-
+  
+  **🎓 Formación:** ASIR  
+  **📅 Año:** 2026  
+  **🛠️ Especialidad:** Administración de Sistemas y Cloud Computing
 </div>
